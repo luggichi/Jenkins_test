@@ -24,7 +24,8 @@ post{
                 try {
                     bat """
                         if not exist "${LOKAL}" mkdir ${LOKAL}
-                        echo Build parameters: > ${LOKAL}\\build.txt
+                        echo create artifactory: > ${LOKAL}\\build.txt
+                        echo ${params.TEST} >> ${LOKAL}\\build.txt
                         """
                     } catch (Exception ex) {
                         println("Caught an exception");
