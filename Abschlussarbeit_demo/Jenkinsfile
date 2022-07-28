@@ -25,12 +25,12 @@ post{
             withEnv([
                 "LOKAL=C:\\Daten_Engelhardt\\Abschlussarbeit_demo\\demo_${BUILD_NUMBER}"
             ]) {
-                junit allowEmptyResults: true, healthScaleFactor: 0.0, testResults: 'C:/Daten_Engelhardt/Abschlussarbeit_demo/demo.xml'
+                junit allowEmptyResults: true, healthScaleFactor: 0.0, testResults: 'Abschlussarbeit_demo/demo.xml'
                         publishHTML target: [
                             allowMissing: true,
                             alwaysLinkToLastBuild: false,
                             keepAll: true,
-                            reportDir: 'uds-global',
+                            reportDir: 'Abschlussarbeit_demo',
                             reportFiles: 'demo.txt',
                             reportName: 'Testreport'
                         ]
