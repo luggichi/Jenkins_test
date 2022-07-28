@@ -13,7 +13,9 @@ stages {
         echo '---Building'
       }
   }
-
+  stage('Test') {
+    echo '---Testing'
+  }
 }
 post{
     always{
@@ -21,6 +23,15 @@ post{
             withEnv([
                 "LOKAL=C:\\Daten_Engelhardt\\Abschlussarbeit_demo\\demo_${BUILD_NUMBER}"
             ]) {
+                junit allowEmptyResults: true, healthScaleFactor: 0.0, testResults: 'C:/Daten_Engelhardt/Abschlussarbeit_demo/demo.xml'
+                        publishHTML target: [
+                            allowMissing: true,
+                            alwaysLinkToLastBuild: false,
+                            keepAll: true,
+                            reportDir: 'uds-global',
+                            reportFiles: 'demo.txt',
+                            reportName: 'Testreport'
+                        ]
                 try {
                     bat """
                         if not exist "${LOKAL}" mkdir ${LOKAL}
