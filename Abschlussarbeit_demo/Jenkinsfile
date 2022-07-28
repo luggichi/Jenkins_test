@@ -4,7 +4,6 @@ stages {
   stage('Checkout') {
     steps {
         git branch: 'main', url: 'https://github.com/luggichi/Jenkins_test.git'
-       checkout([$class: 'SubversionSCM', additionalCredentials: [], excludedCommitMessages: '', excludedRegions: '', excludedRevprop: '', excludedUsers: '', filterChangelog: false, ignoreDirPropChanges: false, includedRegions: '', locations: [[cancelProcessOnExternalsFail: true, credentialsId: 'svn', depthOption: 'infinity', ignoreExternalsOption: true, local: '.', remote: 'https://tools.mobility.siemens.com/repos/uds_prj_vectron/projects/Vectron_X4_F/branches/ba_jenkins']], quietOperation: true, workspaceUpdater: [$class: 'UpdateUpdater']])
         echo '---Checkout'
     }
   }
