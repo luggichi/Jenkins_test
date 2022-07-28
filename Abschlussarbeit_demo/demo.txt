@@ -1,0 +1,10 @@
+Auflistung der Testergebnisse vom 29.07.2022
+
+[1] Test1			                                    o.k. 
+[2] Test2			                                    o.k. 
+[3] Test3				                            o.k. 
+[4] Test4				                            o.k. 
+
+ 
+Script ist erfolgreich durchgelaufen 
+Anzahl bearbeiteter Tests: [4] 

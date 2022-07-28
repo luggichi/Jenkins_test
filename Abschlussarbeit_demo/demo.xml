@@ -1,0 +1,6 @@
+<testsuite>
+    <testcase classname="Test1" name="o.k."/>
+    <testcase classname="Test2" name="o.k."/>
+    <testcase classname="Test3" name="o.k."/>
+    <testcase classname="Test4" name="o.k."/>
+</testsuite>
